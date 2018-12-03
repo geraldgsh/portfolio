@@ -1,6 +1,6 @@
-# Pictogram
+# Portfolio
 
-An instagram clone with a dash of Javascript & S3 AWS storage.
+A Portfolio page running on Ruby On Rails.
 
 # Ruby Version
 
@@ -47,7 +47,7 @@ Follow the instructions to [install ubuntu](https://ggoh-portfolio.herokuapp.com
 
 ## Running the App
 
-First, clone the `ggoh-pictogram` repository into a new folder with your project name.
+First, clone the `ggoh-portfolio` repository into a new folder with your project name.
 Seperate words in the folder name using hyphens (example: `my-new-project`).
 
 ```
@@ -66,5 +66,7 @@ After that, you should be ready to roll! Use any of the Rails commands (like `ra
 
 Instructions to [build portfolio app](https://ggoh-portfolio.herokuapp.com/posts/8)
 
+Visit [my portfolio page](https://ggoh-portfolio.herokuapp.com)
+
 ## License
-Open?
+Open & Free to user

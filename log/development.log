@@ -615,3 +615,72 @@ Processing by PagesController#portfolio as HTML
 Completed 200 OK in 189ms (Views: 187.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-12 22:22:18 +0800
+  [1m[35m (22.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ggoh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#welcome as HTML
+  Rendering pages/welcome.html.erb within layouts/application
+  Rendered pages/welcome.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 40214ms (Views: 40133.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2018-12-12 22:23:24 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered layouts/_navigation.html.erb (9.8ms)
+  [1m[36mPost Load (93.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:7
+  Rendered posts/index.html.erb within layouts/application (507.7ms)
+Completed 200 OK in 707ms (Views: 520.1ms | ActiveRecord: 114.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-12-12 22:23:26 +0800
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 182ms (Views: 180.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2018-12-16 22:36:43 +0800
+  [1m[35m (23.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ggoh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (29557.2ms)
+Completed 500 Internal Server Error in 29615ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( application-about.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag "application-about", :media => "about" %>
+    2: <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" %>
+    3: <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
+    4: 
+  
+app/views/pages/about.html.erb:1:in `_app_views_pages_about_html_erb__3210099880703979558_47009083225240'
+Started GET "/about" for 127.0.0.1 at 2018-12-16 22:41:19 +0800
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1226.8ms)
+Completed 500 Internal Server Error in 1238ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( application-about.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag "application-about", :media => "about" %>
+    2: <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" %>
+    3: <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
+    4: 
+  
+app/views/pages/about.html.erb:1:in `_app_views_pages_about_html_erb__3210099880703979558_69952015732900'
+Started GET "/about" for 127.0.0.1 at 2018-12-16 22:42:47 +0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ggoh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (2200.7ms)
+Completed 200 OK in 3127ms (Views: 3107.2ms | ActiveRecord: 0.0ms)
+
+

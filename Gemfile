@@ -37,6 +37,8 @@ gem 'devise', '~> 4.5.0'
 gem 'carrierwave', '~> 1.2.3'
 gem 'mini_magick', '~> 4.8.0'
 gem 'codemirror-rails', '~> 5.16'
+gem 'elasticsearch-model', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: 'master'
+gem 'elasticsearch-rails', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: 'master'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -3,4 +3,6 @@ class Post < ApplicationRecord
 	validates :title, presence: true, length: {maximum: 140}
 	#This validates presence of body
 	validates :body, presence: true
+	include Elasticsearch::Model
+	include Elasticsearch::Model::Callbacks
 end

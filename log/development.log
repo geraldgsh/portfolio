@@ -785,3 +785,205 @@ Processing by PagesController#about as HTML
 Completed 200 OK in 120ms (Views: 117.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/blog" for 127.0.0.1 at 2019-01-03 00:08:40 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered layouts/_navigation.html.erb (6.4ms)
+  [1m[36mPost Load (26.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (231.1ms)
+Started GET "/blog" for 127.0.0.1 at 2019-01-03 00:08:45 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 12514ms (Views: 12511.9ms | ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 17186ms (Views: 16911.0ms | ActiveRecord: 197.9ms)
+
+
+Started GET "/posts/search" for 127.0.0.1 at 2019-01-03 00:09:11 +0800
+Processing by PostsController#search as HTML
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 211ms (Views: 160.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=hello&commit=Search" for 127.0.0.1 at 2019-01-03 00:09:15 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"hello"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (1017.6ms)
+Completed 500 Internal Server Error in 1021ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error ([404] {"error":{"root_cause":[{"type":"index_not_found_exception","reason":"no such index","resource.type":"index_or_alias","resource.id":"posts","index_uuid":"_na_","index":"posts"}],"type":"index_not_found_exception","reason":"no such index","resource.type":"index_or_alias","resource.id":"posts","index_uuid":"_na_","index":"posts"},"status":404}):
+     6: <% end %>
+     7: 
+     8: <% unless @posts.nil? %>
+     9:   <% if @posts.empty? %>
+    10:     <h2>No posts found matching your query.</h2>
+    11:   <% else %>
+    12:     <h2>Search results</h2>
+  
+app/views/posts/search.html.erb:9:in `_app_views_posts_search_html_erb__38376891637966207_70152322557160'
+Started GET "/admins/sign_in" for 127.0.0.1 at 2019-01-03 00:10:13 +0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ggoh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (2.7ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (577.4ms)
+Completed 200 OK in 2268ms (Views: 2212.0ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-01-03 00:10:34 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pjs2qhhdlQOcZHsD6K0yyLJ6RgNZlNiEVCgkYNCqtkC4Ps7HuM8NSFvT8SoLHuN47XGTlqQ0ojV0Z3i5+RXA8Q==", "admin"=>{"email"=>"hysteria81@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (29.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "hysteria81@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ggoh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 781ms (ActiveRecord: 29.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pjs2qhhdlQOcZHsD6K0yyLJ6RgNZlNiEVCgkYNCqtkC4Ps7HuM8NSFvT8SoLHuN47XGTlqQ0ojV0Z3i5+RXA8Q==", "admin"=>{"email"=>"hysteria81@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (1.9ms)
+  Rendered admins/sessions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 296ms (Views: 131.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2019-01-03 00:10:40 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K+IcdHC8UlUqbPMD+WVK0IjGcyuKATyOqtT7Vai3An0p638d7nn/pn3EwF3V8ARckvn16dShjaeD7rsjYG0DPg==", "admin"=>{"email"=>"hysteria81@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (6.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["email", "hysteria81@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ggoh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 220ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-03 00:10:40 +0800
+Processing by PagesController#welcome as HTML
+  Rendering pages/welcome.html.erb within layouts/application
+  Rendered pages/welcome.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 216ms (Views: 178.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2019-01-03 00:10:42 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:16
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  [1m[36mPost Load (4.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 288ms (Views: 263.4ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-01-03 00:10:44 +0800
+Processing by PostsController#new as HTML
+  [1m[36mAdmin Load (6.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ggoh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering posts/new.html.erb within layouts/application
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered posts/_form.html.erb (877.9ms)
+  Rendered posts/new.html.erb within layouts/application (985.4ms)
+Completed 200 OK in 3106ms (Views: 1154.9ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2019-01-03 00:14:00 +0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8DVeI5HIVctgAs1iY0GKy+jwvIP07ciH2KfomsFApmWjSQTqcGl0Ff1G2SKPvvuOYrq6AYA1uTndm96fhgWmtQ==", "post"=>{"title"=>"Setting up Ubuntu for Ruby On Rails Part 1", "body"=>"<p>Setting up a development environment</p>\r\n\r\n<p>Virtual Machine<br />\r\nA virtual machine (VM) is a software-based emulation of a computer.</p>\r\n\r\n<p>VirtualBox<br />\r\nVirtualBox is Oracle&rsquo;s virtualization platform, which can be downloaded on all the supported operating system (Win, Linux, OS X). Download the installer from https://www.virtualbox.org/wiki/Downloads. Continue with the installation of VirtualBox with the defaults. This will open VirtualBox at the end of the installation.</p>\r\n\r\n<p>Create Virtual Machine<br />\r\nClick &#39;New&#39; button to open a dialog.</p>\r\n\r\n<p>Type a name for the new virtual machine. Note that VirtualBox automatically changes &#39;Type&#39; to Linux and &#39;Version&#39; to &#39;Ubuntu (64 bit)&#39;. These two options are exactly what we need.</p>\r\n\r\n<p>Following selections were made in subsequent;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; HDD: 25 Gig<br />\r\n&nbsp;&nbsp;&nbsp; Memory: 2048MB<br />\r\n&nbsp;&nbsp;&nbsp; Video Memory 16MB</p>\r\n\r\n<p>Accept the default &#39;Create a virtual hard drive now&#39; and click &#39;Create&#39; button.</p>\r\n\r\n<p>Change the storage type from the default &#39;Dynamically allocated&#39; to &#39;Fixed size&#39; to increase performance. storage type</p>\r\n\r\n<p><br />\r\nAfter Virtual Machine have been created,&nbsp; select a new virtual machine and click &#39;Settings&#39; button. Click on &#39;Storage&#39; category and then &#39;Empty&#39; under Controller:IDE. Click &quot;CD/DVD&quot; icon on right hand side and select the ubuntu ISO file to mount.</p>\r\n\r\n<p>Download 64-bit Ubuntu ISO file from https://www.ubuntu.com/download/desktop&nbsp; Also make sure the VT-x/Virtualization Technology has been enabled in your computer&#39;s BIOS/Basic Input Output System.</p>\r\n\r\n<p>Install Ubuntu<br />\r\nBack to Oracle VM VirtualBox Manager, click on the new Ubuntu virtual machine and hit &#39;Start&#39; button. Now you shall see a &#39;Welcome&#39; screen. Click &#39;Install Ubuntu&#39; button.</p>\r\n\r\n<p>Click &#39;Continue&#39; button.</p>\r\n\r\n<p>Make sure &#39;Erase disk and install Ubuntu&#39; option is selected and click &#39;Install Now&#39; button.</p>\r\n\r\n<p>Ubuntu will ask a few questions. Click &#39;Continue&#39; button if detault is good.</p>\r\n\r\n<p>Enter your preferred name, username and password. Note that this user will have root/sudo privilege. Click &#39;Continue&#39; button.</p>\r\n\r\n<p>The installation will continue until it is finished.</p>\r\n\r\n<p>After installation is complete, click &#39;Restart Now&#39; button. When you see a screen with a black background saying &#39;Please remove installation media and close the tray (if any) then press ENTER:&#39;, just follow it.</p>\r\n\r\n<p>Enter the password you have chosen and press &#39;Enter&#39;.</p>\r\n\r\n<p>More About VirtualBox<br />\r\nGuest Additions<br />\r\nAfter the Ubuntu guest machine is installed, you will find the Ubuntu OS screen size is not extendable and you are not able to share folders between the host machine and Ubuntu.</p>\r\n\r\n<p>Guest Additions software provide additional capability to a guest virtual machine, including mouse pointer integration, better video support, share folders, share clipboard, et al.</p>\r\n\r\n<p>Before we proceed to install Guest Additions, make sure the current user has sudo/root privilege. If the current user does not have sudo/root privilege or it is not sure, run the following terminal command from an account (such as the user created when Ubuntu was first created; see the screenshot of &#39;Who are you?&#39; above) with root privileges to enable the root privilege for the current user.</p>\r\n\r\n<p>sudo adduser USERNAME sudo</p>\r\n\r\n<p>USERNAME should be replaced by the current user&#39;s name.<br />\r\nTo install Guest Additions, click Devices &gt; Insert Guest Additions CD images</p>\r\n\r\n<p>Click &#39;Run&#39; button (next to &#39;Cancel&#39; button) to start the installation. Note that the version of VBOXADDITIONS should be matched with the one of VirtualBox you have installed.</p>\r\n\r\n<p>Installing Guest Additions requires root privilege. Enter user&#39;s password (assume the current user has sudo privilege)</p>\r\n\r\n<p>When the installation is finished, press Return key to close the terminal window.</p>\r\n\r\n<p>Now prepare to restart the system to enable the change. Click &#39;Shutdown&#39; on the menu and then the &#39;Restart&#39; button.</p>\r\n\r\n<p>After rebooting Ubuntu, you will see the desktop resolution is much better.</p>\r\n\r\n<p>Share Folders<br />\r\nBefore you can enable shared folders on the host machine, make sure you have installed VirtualBox Guest Additions software on the guest machine.</p>\r\n\r\n<p>When Ubuntu guest machine is on, click on Devices &gt; Shared folders settings.</p>\r\n\r\n<p>Select Machine Folders and hit the add button (plus sign).</p>\r\n\r\n<p>Browse to the folder you wish to access from the guest machine. Check Auto-mount and Make Permanent options and click OK button.</p>\r\n\r\n<p>Click OK button once more.</p>\r\n\r\n<p>Now type &#39;terminal&#39; in Dash to open a Terminal.</p>\r\n\r\n<p>Type the following line in the Terminal to add a user to &#39;vboxsf&#39; group. This step is necessary in order to use the VB&#39;s &#39;Shared Folder&#39; feature.</p>\r\n\r\n<p>sudo adduser ggoh vboxsf</p>\r\n\r\n<p>When you are done, restart the Ubuntu guest machine and go to /media/ directory. From Nautilus (file manager in Ubuntu), click Computer &gt; File System &gt; Media folder and inside it you will see a folder beginning with sf_ (the folder name is sf_Downloads in our example). Now you can transfer files between the Ubuntu guest machine and the Windows host machine in Nautilus.<br />\r\nAlthough Shared Folder system in VirtualBox is a nice feature, using VirtualBox shared folder directly for fastq data, annotation or output directory can significantly reduce the performance compared to a native (Ubuntu) system or VirtualBox native system.</p>\r\n\r\n<p>references: here and here</p>\r\n"}, "commit"=>"Create Post"}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ggoh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[36mPost Create (202.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Setting up Ubuntu for Ruby On Rails Part 1"], ["body", "<p>Setting up a development environment</p>\r\n\r\n<p>Virtual Machine<br />\r\nA virtual machine (VM) is a software-based emulation of a computer.</p>\r\n\r\n<p>VirtualBox<br />\r\nVirtualBox is Oracle&rsquo;s virtualization platform, which can be downloaded on all the supported operating system (Win, Linux, OS X). Download the installer from https://www.virtualbox.org/wiki/Downloads. Continue with the installation of VirtualBox with the defaults. This will open VirtualBox at the end of the installation.</p>\r\n\r\n<p>Create Virtual Machine<br />\r\nClick &#39;New&#39; button to open a dialog.</p>\r\n\r\n<p>Type a name for the new virtual machine. Note that VirtualBox automatically changes &#39;Type&#39; to Linux and &#39;Version&#39; to &#39;Ubuntu (64 bit)&#39;. These two options are exactly what we need.</p>\r\n\r\n<p>Following selections were made in subsequent;</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; HDD: 25 Gig<br />\r\n&nbsp;&nbsp;&nbsp; Memory: 2048MB<br />\r\n&nbsp;&nbsp;&nbsp; Video Memory 16MB</p>\r\n\r\n<p>Accept the default &#39;Create a virtual hard drive now&#39; and click &#39;Create&#39; button.</p>\r\n\r\n<p>Change the storage type from the default &#39;Dynamically allocated&#39; to &#39;Fixed size&#39; to increase performance. storage type</p>\r\n\r\n<p><br />\r\nAfter Virtual Machine have been created,&nbsp; select a new virtual machine and click &#39;Settings&#39; button. Click on &#39;Storage&#39; category and then &#39;Empty&#39; under Controller:IDE. Click &quot;CD/DVD&quot; icon on right hand side and select the ubuntu ISO file to mount.</p>\r\n\r\n<p>Download 64-bit Ubuntu ISO file from https://www.ubuntu.com/download/desktop&nbsp; Also make sure the VT-x/Virtualization Technology has been enabled in your computer&#39;s BIOS/Basic Input Output System.</p>\r\n\r\n<p>Install Ubuntu<br />\r\nBack to Oracle VM VirtualBox Manager, click on the new Ubuntu virtual machine and hit &#39;Start&#39; button. Now you shall see a &#39;Welcome&#39; screen. Click &#39;Install Ubuntu&#39; button.</p>\r\n\r\n<p>Click &#39;Continue&#39; button.</p>\r\n\r\n<p>Make sure &#39;Erase disk and install Ubuntu&#39; option is selected and click &#39;Install Now&#39; button.</p>\r\n\r\n<p>Ubuntu will ask a few questions. Click &#39;Continue&#39; button if detault is good.</p>\r\n\r\n<p>Enter your preferred name, username and password. Note that this user will have root/sudo privilege. Click &#39;Continue&#39; button.</p>\r\n\r\n<p>The installation will continue until it is finished.</p>\r\n\r\n<p>After installation is complete, click &#39;Restart Now&#39; button. When you see a screen with a black background saying &#39;Please remove installation media and close the tray (if any) then press ENTER:&#39;, just follow it.</p>\r\n\r\n<p>Enter the password you have chosen and press &#39;Enter&#39;.</p>\r\n\r\n<p>More About VirtualBox<br />\r\nGuest Additions<br />\r\nAfter the Ubuntu guest machine is installed, you will find the Ubuntu OS screen size is not extendable and you are not able to share folders between the host machine and Ubuntu.</p>\r\n\r\n<p>Guest Additions software provide additional capability to a guest virtual machine, including mouse pointer integration, better video support, share folders, share clipboard, et al.</p>\r\n\r\n<p>Before we proceed to install Guest Additions, make sure the current user has sudo/root privilege. If the current user does not have sudo/root privilege or it is not sure, run the following terminal command from an account (such as the user created when Ubuntu was first created; see the screenshot of &#39;Who are you?&#39; above) with root privileges to enable the root privilege for the current user.</p>\r\n\r\n<p>sudo adduser USERNAME sudo</p>\r\n\r\n<p>USERNAME should be replaced by the current user&#39;s name.<br />\r\nTo install Guest Additions, click Devices &gt; Insert Guest Additions CD images</p>\r\n\r\n<p>Click &#39;Run&#39; button (next to &#39;Cancel&#39; button) to start the installation. Note that the version of VBOXADDITIONS should be matched with the one of VirtualBox you have installed.</p>\r\n\r\n<p>Installing Guest Additions requires root privilege. Enter user&#39;s password (assume the current user has sudo privilege)</p>\r\n\r\n<p>When the installation is finished, press Return key to close the terminal window.</p>\r\n\r\n<p>Now prepare to restart the system to enable the change. Click &#39;Shutdown&#39; on the menu and then the &#39;Restart&#39; button.</p>\r\n\r\n<p>After rebooting Ubuntu, you will see the desktop resolution is much better.</p>\r\n\r\n<p>Share Folders<br />\r\nBefore you can enable shared folders on the host machine, make sure you have installed VirtualBox Guest Additions software on the guest machine.</p>\r\n\r\n<p>When Ubuntu guest machine is on, click on Devices &gt; Shared folders settings.</p>\r\n\r\n<p>Select Machine Folders and hit the add button (plus sign).</p>\r\n\r\n<p>Browse to the folder you wish to access from the guest machine. Check Auto-mount and Make Permanent options and click OK button.</p>\r\n\r\n<p>Click OK button once more.</p>\r\n\r\n<p>Now type &#39;terminal&#39; in Dash to open a Terminal.</p>\r\n\r\n<p>Type the following line in the Terminal to add a user to &#39;vboxsf&#39; group. This step is necessary in order to use the VB&#39;s &#39;Shared Folder&#39; feature.</p>\r\n\r\n<p>sudo adduser ggoh vboxsf</p>\r\n\r\n<p>When you are done, restart the Ubuntu guest machine and go to /media/ directory. From Nautilus (file manager in Ubuntu), click Computer &gt; File System &gt; Media folder and inside it you will see a folder beginning with sf_ (the folder name is sf_Downloads in our example). Now you can transfer files between the Ubuntu guest machine and the Windows host machine in Nautilus.<br />\r\nAlthough Shared Folder system in VirtualBox is a nice feature, using VirtualBox shared folder directly for fastq data, annotation or output directory can significantly reduce the performance compared to a native (Ubuntu) system or VirtualBox native system.</p>\r\n\r\n<p>references: here and here</p>\r\n"], ["created_at", "2019-01-02 16:14:00.714787"], ["updated_at", "2019-01-02 16:14:00.714787"]]
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[35m (108.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:18
+Redirected to http://localhost:3000/blog.2
+Completed 302 Found in 3216ms (ActiveRecord: 312.2ms)
+
+
+Started GET "/blog.2" for 127.0.0.1 at 2019-01-03 00:14:03 +0800
+Processing by PostsController#index as 
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:16
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 139ms (Views: 127.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/search" for 127.0.0.1 at 2019-01-03 00:14:08 +0800
+Processing by PostsController#search as HTML
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 104ms (Views: 102.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=virtualbox&commit=Search" for 127.0.0.1 at 2019-01-03 00:14:14 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"virtualbox"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (235.4ms)
+Completed 200 OK in 559ms (Views: 555.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=virtualbox&commit=Search" for 127.0.0.1 at 2019-01-03 00:14:44 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"virtualbox"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (56.6ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `author' for #<Elasticsearch::Model::Response::Result:0x00007f5f8662dfa8>):
+    25:       <tbody>
+    26:         <% @posts.each do |post| %>
+    27:           <tr>
+    28:             <td><%= post.author %></td>
+    29:             <td><%= post.title %></td>
+    30:             <td><%= post.tags %></td>
+    31:             <td><%= post.published_on %></td>
+  
+app/views/posts/search.html.erb:28:in `block in _app_views_posts_search_html_erb___3171154867384739482_70024126861120'
+app/views/posts/search.html.erb:26:in `_app_views_posts_search_html_erb___3171154867384739482_70024126861120'
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=virtualbox&commit=Search" for 127.0.0.1 at 2019-01-03 00:15:56 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"virtualbox"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 130ms (Views: 129.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2019-01-03 00:15:58 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:64
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 125ms (Views: 110.7ms | ActiveRecord: 2.6ms)
+
+
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" ASC LIMIT $1[0m  [["LIMIT", 1000]]
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=hello&commit=Search" for 127.0.0.1 at 2019-01-03 00:19:01 +0800
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ggoh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"hello"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 2804ms (Views: 2786.2ms | ActiveRecord: 2.6ms)
+
+

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 	before_action :find_post, only: [:edit, :update, :show, :destroy]
-	before_action :authenticate_admin!, except: [:index, :show]
+	before_action :authenticate_admin!, except: [:index, :show, :search]
 
 	# Index action to render all posts
 	def index
@@ -47,6 +47,13 @@ class PostsController < ApplicationController
 	 		flash[:alert] = "Error updating post!"
 	 	end
 	 end
+	 def search
+	  query = params[:search_posts].presence && params[:search_posts][:query]
+
+	  if query
+	    @posts = Post.search_published(query)
+	  end
+	end
 
 	 private
 	 def post_params

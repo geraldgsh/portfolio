@@ -39,7 +39,7 @@ gem 'mini_magick', '~> 4.8.0'
 gem 'codemirror-rails', '~> 5.16'
 gem 'elasticsearch-model', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: 'master'
 gem 'elasticsearch-rails', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: 'master'
-
+gem 'bonsai-elasticsearch-rails', '~> 7.0', '>= 7.0.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

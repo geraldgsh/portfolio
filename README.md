@@ -69,4 +69,4 @@ Instructions to [build portfolio app](https://ggoh-portfolio.herokuapp.com/posts
 Visit [my portfolio page](https://ggoh-portfolio.herokuapp.com)
 
 ## License
-Open & Free to user
+Open & Free to use

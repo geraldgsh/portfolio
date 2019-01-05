@@ -1197,3 +1197,87 @@ Processing by PostsController#search as HTML
 Completed 200 OK in 201ms (Views: 199.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/blog" for 127.0.0.1 at 2019-01-05 18:12:39 +0800
+  [1m[35m (32.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ggoh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAdmin Load (34.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:16
+  Rendered layouts/_navigation.html.erb (180.9ms)
+  [1m[36mPost Load (25.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (269.9ms)
+Completed 200 OK in 8477ms (Views: 8244.4ms | ActiveRecord: 148.4ms)
+
+
+Started GET "/posts/search" for 127.0.0.1 at 2019-01-05 18:12:50 +0800
+Processing by PostsController#search as HTML
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (187.4ms)
+Completed 200 OK in 384ms (Views: 300.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=ubuntu&commit=Search" for 127.0.0.1 at 2019-01-05 18:12:59 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"ubuntu"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (719.7ms)
+Completed 200 OK in 819ms (Views: 817.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=hello&commit=Search" for 127.0.0.1 at 2019-01-05 18:13:14 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"hello"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (89.6ms)
+Completed 200 OK in 199ms (Views: 196.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=rake&commit=Search" for 127.0.0.1 at 2019-01-05 18:13:23 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"rake"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (56.8ms)
+Completed 200 OK in 165ms (Views: 163.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2019-01-05 18:13:31 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:16
+  Rendered layouts/_navigation.html.erb (8.8ms)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 168ms (Views: 165.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/search" for 127.0.0.1 at 2019-01-05 18:13:34 +0800
+Processing by PostsController#search as HTML
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 131ms (Views: 129.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=pictogram&commit=Search" for 127.0.0.1 at 2019-01-05 18:13:38 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"pictogram"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (73.5ms)
+Completed 200 OK in 190ms (Views: 189.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2019-01-05 18:13:44 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:16
+  Rendered layouts/_navigation.html.erb (9.2ms)
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 143ms (Views: 139.1ms | ActiveRecord: 2.6ms)
+
+

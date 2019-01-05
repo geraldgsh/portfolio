@@ -1,4 +1,9 @@
-<h1>Elastic search for posts</h1>
+<%= stylesheet_link_tag "application-search", :media => "search" %>
+<%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" %>
+<%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
+
+<div class="search-wrapper">
+<h1>Elastic search for post title</h1>
 
 <%= form_for :search_posts, url: search_posts_path, method: :get do |form| %>
   <%= form.text_field :query, value: params[:search_posts].presence && params[:search_posts][:query] %>
@@ -29,7 +34,8 @@
             <td><%= link_to 'View', post_path(post.id) %></td>
           </tr>
         <% end %>
-      <tbody>
+      </tbody>
     </table>
   <% end %>
 <% end %>
+</div>

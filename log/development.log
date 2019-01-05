@@ -987,3 +987,213 @@ Processing by PostsController#search as HTML
 Completed 200 OK in 2804ms (Views: 2786.2ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=hello&commit=Search" for 127.0.0.1 at 2019-01-05 10:15:10 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"hello"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (159.9ms)
+Completed 500 Internal Server Error in 358ms (ActiveRecord: 38.1ms)
+
+
+  
+ActionView::Template::Error (The asset "application-search.css" is not present in the asset pipeline.):
+    1: <%= stylesheet_link_tag "application-search", :media => "search" %>
+    2: <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" %>
+    3: <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
+    4: 
+  
+app/views/posts/search.html.erb:1:in `_app_views_posts_search_html_erb__1296522726223210445_70090014923760'
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=virtualbox&commit=Search" for 127.0.0.1 at 2019-01-05 10:15:57 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"virtualbox"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "application-search.css" is not present in the asset pipeline.):
+    1: <%= stylesheet_link_tag "application-search", :media => "search" %>
+    2: <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" %>
+    3: <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
+    4: 
+  
+app/views/posts/search.html.erb:1:in `_app_views_posts_search_html_erb__1296522726223210445_70089883225840'
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=virtualbox&commit=Search" for 127.0.0.1 at 2019-01-05 10:16:48 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"virtualbox"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (956.9ms)
+Started GET "/blog" for 127.0.0.1 at 2019-01-05 10:16:52 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAdmin Load (32.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:16
+  Rendered layouts/_navigation.html.erb (327.3ms)
+  [1m[36mPost Load (21.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (479.1ms)
+Completed 200 OK in 24127ms (Views: 24124.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 20034ms (Views: 19620.6ms | ActiveRecord: 212.6ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=ubuntu&commit=Search" for 127.0.0.1 at 2019-01-05 10:18:11 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"ubuntu"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (312.0ms)
+Completed 200 OK in 459ms (Views: 457.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=rails&commit=Search" for 127.0.0.1 at 2019-01-05 10:18:18 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"rails"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 199ms (Views: 197.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=stories&commit=Search" for 127.0.0.1 at 2019-01-05 10:18:44 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"stories"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 193ms (Views: 190.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=stories&commit=Search" for 127.0.0.1 at 2019-01-05 10:31:07 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"stories"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (5911.6ms)
+Completed 500 Internal Server Error in 5918ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( application-search.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag "application-search", :media => "search" %>
+    2: <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" %>
+    3: <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
+    4: 
+  
+app/views/posts/search.html.erb:1:in `_app_views_posts_search_html_erb__1296522726223210445_70090015887600'
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=stories&commit=Search" for 127.0.0.1 at 2019-01-05 10:32:31 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"stories"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (1133.7ms)
+Completed 500 Internal Server Error in 1174ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( application-search.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag "application-search", :media => "search" %>
+    2: <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" %>
+    3: <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
+    4: 
+  
+app/views/posts/search.html.erb:1:in `_app_views_posts_search_html_erb__1296522726223210445_70089980678620'
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=rails&commit=Search" for 127.0.0.1 at 2019-01-05 10:32:38 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"rails"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (1017.3ms)
+Completed 500 Internal Server Error in 1022ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( application-search.css )` to `config/initializers/assets.rb` and restart your server):
+    1: <%= stylesheet_link_tag "application-search", :media => "search" %>
+    2: <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" %>
+    3: <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
+    4: 
+  
+app/views/posts/search.html.erb:1:in `_app_views_posts_search_html_erb__1296522726223210445_70089916343140'
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=rails&commit=Search" for 127.0.0.1 at 2019-01-05 10:33:11 +0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ggoh/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"rails"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (1870.6ms)
+Completed 200 OK in 2377ms (Views: 2322.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=rails&commit=Search" for 127.0.0.1 at 2019-01-05 10:35:20 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"rails"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (73.4ms)
+Completed 200 OK in 177ms (Views: 175.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=rails&commit=Search" for 127.0.0.1 at 2019-01-05 10:36:13 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"rails"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (4756.3ms)
+Completed 200 OK in 4948ms (Views: 4946.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=rails&commit=Search" for 127.0.0.1 at 2019-01-05 10:36:33 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"rails"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (5094.3ms)
+Completed 200 OK in 5297ms (Views: 5295.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2019-01-05 10:37:38 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:16
+  Rendered layouts/_navigation.html.erb (70.2ms)
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (143.8ms)
+Completed 200 OK in 353ms (Views: 341.7ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2019-01-05 10:37:42 +0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (24.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:64
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 206ms (Views: 173.9ms | ActiveRecord: 25.5ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2019-01-05 10:38:16 +0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:16
+  Rendered layouts/_navigation.html.erb (10.2ms)
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 192ms (Views: 187.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts/search" for 127.0.0.1 at 2019-01-05 10:38:18 +0800
+Processing by PostsController#search as HTML
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 191ms (Views: 189.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/search?utf8=%E2%9C%93&search_posts%5Bquery%5D=ubuntu&commit=Search" for 127.0.0.1 at 2019-01-05 10:38:24 +0800
+Processing by PostsController#search as HTML
+  Parameters: {"utf8"=>"✓", "search_posts"=>{"query"=>"ubuntu"}, "commit"=>"Search"}
+  Rendering posts/search.html.erb within layouts/application
+  Rendered posts/search.html.erb within layouts/application (86.2ms)
+Completed 200 OK in 201ms (Views: 199.3ms | ActiveRecord: 0.0ms)
+
+

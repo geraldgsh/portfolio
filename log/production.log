@@ -2,3 +2,6 @@ D, [2019-01-19T23:03:45.893956 #24550] DEBUG -- : BONSAI_URL not present, procee
 D, [2019-01-19T23:06:23.690312 #24595] DEBUG -- : BONSAI_URL not present, proceeding withElasticsearch defaults.
 D, [2019-01-19T23:12:38.427584 #24803] DEBUG -- : BONSAI_URL not present, proceeding withElasticsearch defaults.
 D, [2019-01-19T23:16:55.329129 #24905] DEBUG -- : BONSAI_URL not present, proceeding withElasticsearch defaults.
+D, [2019-01-19T23:20:26.987646 #25035] DEBUG -- : BONSAI_URL not present, proceeding withElasticsearch defaults.
+D, [2019-01-19T23:25:30.655059 #25092] DEBUG -- : BONSAI_URL not present, proceeding withElasticsearch defaults.
+D, [2019-01-19T23:26:24.131910 #25137] DEBUG -- : BONSAI_URL not present, proceeding withElasticsearch defaults.
